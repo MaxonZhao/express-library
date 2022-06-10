@@ -13,7 +13,7 @@ var catalogRouter = require('./routes/catalog');
 
 var app = express();
 
-var mongoDB = keys.mongoURI;
+var mongoDB = keys.mongoURI || keys.mongoURI;
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
 
 var db = mongoose.connection;
